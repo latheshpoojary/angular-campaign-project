@@ -1,0 +1,60 @@
+
+<div class="workspace-container">
+    
+    
+        <!-- Content to display when current is true -->
+        <div class="header-container">
+            <h3 class="header-text">
+                Manage Campaigns
+            </h3>
+            <select name="" id="">
+                <option value="">posesssseve bandwisdth</option>  
+                <option value="">Defjnkjsdncsjcsccsdcs</option> 
+                <option value="">sdcdscsdcds csdcsssc</option>
+            </select>
+        </div>
+        <div class="title mt-3">
+            <p>Manage Campaigns</p>
+        </div>
+        <div class="display-list p-4">
+            <button class="btn btn-primary mb-3" routerLink="/campaign-input" >Create Campaign</button>
+            <table class="table table-hover mb-3">
+
+                    <thead>
+                        <tr class="table">
+                            <th>Program ID</th>
+                            <th>Campaign Name</th>
+                            <th>Status</th>
+                            <th>CTR</th>
+                            <th>Start Date</th>
+                            <th>Action</th>
+                        </tr>
+                       
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let campaign of campaignList " >
+                            <td>{{campaign.id}}</td>
+                            <td>{{campaign.order}},{{campaign.name}}</td>
+                            <td >
+                                <div class="status" [style.backgroundColor]="campaign.status === 'completed' ? '#ccffcc' : campaign.status === 'draft' ? '#e6e6e6' : '#ccccff'">
+                                    {{ campaign.status }}
+                                </div>
+                                
+                            </td>
+                            <td>{{campaign.CTR}}</td>
+                            <td>{{campaign.start_date | date:'short'}}</td>
+                            <td>
+                                <select name="" id="" class="form-select">
+                                    <option value="Action" hidden selected disabled>Action</option>
+                                    <option value="Edit">Edit</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                
+            </table>
+        </div>
+</div>
+
+
