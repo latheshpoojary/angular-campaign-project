@@ -41,7 +41,16 @@ $header-text:rgb(62, 60, 60);
     .display-list{
         background-color: #f2f2f2;
         border-radius: 8px;
-        
+        .display-header{
+            display: flex;
+            justify-content: space-between;
+            select{
+                padding: 0.1rem !important;
+            }
+            button{
+                border: transparent;
+            }
+        }
         .title,td,th{
             font-size: 0.8rem !important;
             

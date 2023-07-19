@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public current = true;
+  public sortString!:string;
+  public sortOrder = 'desc';
   public campaignList = [
     {
       id:123456,
@@ -22,7 +24,7 @@ export class HeaderComponent {
     {
       id:848743,
       order:"Food",
-      name:"seen",
+      name:"Seen",
       status:"draft",
       CTR:"1.5%",
       start_date:new Date()
@@ -33,7 +35,7 @@ export class HeaderComponent {
     {
       id:828327,
       order:"Cofee",
-      name:"ramesh",
+      name:"Ramesh",
       status:"completed",
       CTR:"2.5%",
       start_date:new Date()
@@ -45,7 +47,7 @@ export class HeaderComponent {
       id:989438,
       order:"Tesco",
       name:"Vikash",
-      status:"Scheduled",
+      status:"scheduled",
       CTR:"2.5%",
       start_date:new Date()
 
@@ -55,7 +57,7 @@ export class HeaderComponent {
     {
       id:728343,
       order:"Food",
-      name:"dosen",
+      name:"Dosen",
       status:"completed",
       CTR:"2.5%",
       start_date:new Date()
@@ -87,4 +89,15 @@ export class HeaderComponent {
 
     }
   ]
+  sortOnDirection(){
+    if(this.sortOrder=='asc'){
+      this.sortOrder= 'desc';
+    }
+    else{
+      this.sortOrder='asc';
+    }
+    console.log(this.sortOrder);
+    
+    
+  }
 }
