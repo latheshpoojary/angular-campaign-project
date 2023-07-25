@@ -18,9 +18,9 @@ $header-text:rgb(62, 60, 60);
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        // border: 1px solid red;
+        
         .header-text{
-            font-size: min(2vw,1.5rem);
+            font-size: min(6vw,1.5rem);
             color: $header-text;
             text-align: center;
             
@@ -28,7 +28,7 @@ $header-text:rgb(62, 60, 60);
         }
         select{
             padding: 0.2rem;
-            border: 2px solid grey;
+            
             border-radius: 0.1rem;
         }
         
@@ -41,6 +41,11 @@ $header-text:rgb(62, 60, 60);
     .display-list{
         background-color: #f2f2f2;
         border-radius: 8px;
+        width: 100%;
+        // height: 70vh;
+        
+        
+        
         .display-header{
             display: flex;
             justify-content: space-between;
@@ -51,8 +56,18 @@ $header-text:rgb(62, 60, 60);
                 border: transparent;
             }
         }
+        .display-container{
+            height: 60vh;
+            overflow-y: scroll;
+        }
+        
+
+           
+        
+        
         .title,td,th{
             font-size: 0.8rem !important;
+            
             
         }
         .form-select{
@@ -62,10 +77,13 @@ $header-text:rgb(62, 60, 60);
                 background-color: #fff;
             }
         }
+        .userName{
+            cursor: pointer;
+        }
         .status{
             width: 5rem;
             height: 1.5rem;
-            // padding: 0.5rem;
+            
             text-align: center;
             
             background-color: aqua;

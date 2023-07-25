@@ -8,11 +8,14 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 
 
 
-import { HeaderComponent } from './header/header.component';
-import { CampaignInputComponent } from './campaign-input/campaign-input.component';
-import { CampaignDetailsComponent } from './campaign-details/campaign-details.component';
-import { LocationDetailsComponent } from './location-details/location-details.component';
+import { HeaderComponent } from './campaign/header/header.component';
+import { CampaignInputComponent } from './campaign/campaign-input/campaign-input.component';
+import { CampaignDetailsComponent } from './campaign/campaign-details/campaign-details.component';
+import { LocationDetailsComponent } from './campaign/location-details/location-details.component';
 import { SortListPipe } from './pipes/sort-list.pipe';
+import { UserDetailsComponent } from './campaign/user-details/user-details.component';
+import { AudienceComponent } from './campaign/audience/audience.component';
+import { SummaryComponent } from './campaign/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { SortListPipe } from './pipes/sort-list.pipe';
     CampaignInputComponent,
     CampaignDetailsComponent,
     LocationDetailsComponent,
-    SortListPipe
+    SortListPipe,
+    UserDetailsComponent,
+    AudienceComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,93 @@
+<div class="audience-container p-3">
+  <h5 class="mb-3">Audience Details &#x2139;</h5>
+  <div class="browse">
+    
+    <input type="search" class="form-control" placeholder="Search..." />
+    <!-- <input type="text" placeholder="Browse &#x25BC;" class="form-control dropdown" (click)="showDetails()"> -->
+    <button #myButton class="btn btn-info" (click)="showDetails(myButton)">Browse &#x25BC;</button>
+  </div>
+  <div *ngIf="content" class="content">
+    <table class="table mt-2">
+      <thead>
+        <tr>
+          <th>Industry</th>
+          <th>Category</th>
+          <th>Application</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h5>Demographic</h5>
+            <p>10 Category </p>
+            <span class="mx-5">&#10097;</span>
+           
+          </td>
+          <td>
+            <h5>Age</h5>
+            <p>6 Category </p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <input type="checkbox" name="" id="">&gt; 20 
+            
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h5>Geographic</h5>
+            <p>5 Category </p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <h5>Gender</h5>
+            <p>7 Category </p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <input type="checkbox" name="" id="">&gt; 20 
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h5>Commercial</h5>
+            <p>11 Category ></p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <h5>360 Labels</h5>
+            <p>7 Category </p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <input type="checkbox" name="" id="">&gt; 20 
+
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <h5>Demographic</h5>
+            <p>10 Category </p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <h5>Age</h5>
+            <p>6 Category </p>
+            <span class="mx-5">&#10097;</span>
+          </td>
+          <td>
+            <input type="checkbox" name="" id="">&gt; 20 
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer mt-3">
+    <button class="btn btn-secondary" (click)="goBack()" [routerLink]="['/campaign-input/location']">Back</button>
+    <button class="btn btn-primary" (click)="goNext()" [routerLink]="['/campaign-input/summary']">Next</button>
+    
+  </div>
+  
+</div>

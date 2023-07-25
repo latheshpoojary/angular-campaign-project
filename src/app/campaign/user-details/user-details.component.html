@@ -1,0 +1,48 @@
+<div class="workspace-container">
+    
+    
+    <!-- Content to display when current is true -->
+    <div class="header-container">
+        <h3 class="header-text">
+            Manage Campaigns
+        </h3>
+        <select name="" id="">
+            <option value="">posesssseve bandwisdth</option>  
+            <option value="">Defjnkjsdncsjcsccsdcs</option> 
+            <option value="">sdcdscsdcds csdcsssc</option>
+        </select>
+    </div>
+    <div class="display-details">
+        <div class="userdetails">
+            <div class="left">
+                <img src="./../../../assets/image/person.jpg" alt="">
+                <h3>{{userDetails.name}}</h3>
+            </div>
+
+            <div class="right">
+                <table>
+                    <tr>
+                        <td>id</td>
+                        <td>{{userDetails.id}}</td>
+                    </tr>
+                    <tr>
+                        <td >Status</td>
+                        <td>
+                            <div class="status" [style.backgroundColor]="userDetails.status === 'completed' ? '#ccffcc' : userDetails.status === 'draft' ? '#e6e6e6' : '#ccccff'">
+                                {{userDetails.status}}
+                            </div></td>
+                    </tr>
+                    <tr>
+                        <td>CTR</td>
+                        <td>{{userDetails.CTR}}</td>
+                    </tr>
+                    <tr>
+                        <td>Start Date</td>
+                        <td>{{userDetails.start_date | date:'d MMMM,hh mm(YYYY)'}}</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

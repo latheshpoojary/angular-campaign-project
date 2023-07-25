@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SortListPipe implements PipeTransform {
 
   transform(value:any[],sortString:any,order:string): any[] {
+   console.log(sortString);
    
     let toggleOrder=1;
     if(order==='desc'){

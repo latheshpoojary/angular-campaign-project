@@ -1,0 +1,26 @@
+<div class="summary-container">
+    <h5>Summary</h5>
+    <div class="display-details">
+        <div class="fields">
+            <p>Objective</p>
+            <p>Category</p>
+            <p>Offer Type</p>
+            <p>Comment</p>
+            <p>Status</p>
+            <p>Location</p>
+        </div>
+        <div class="values">
+            <p>{{formData.objective}}</p>
+            <p>{{formData.category}}</p>
+            <p>{{formData.offer_type}}</p>
+            <p>{{formData.comment}}</p>
+            <p class="status" [style.backgroundColor]="formData.status === 'completed' ? '#ccffcc' : formData.status === 'draft' ? '#e6e6e6' : '#ccccff'">{{formData.status}}</p>
+            <p>{{formData.location}}</p>
+        </div>
+    </div>
+    <div class="footer">
+        <button class="btn btn-secondary mx-3" [routerLink]="['/campaign-input/audience']">Back</button>
+        <button class="btn btn-primary" routerLink="/campaign">Submit</button>
+    </div>
+    
+</div>

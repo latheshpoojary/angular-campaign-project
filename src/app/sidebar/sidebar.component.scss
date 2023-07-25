@@ -16,7 +16,7 @@ $background-color:rgb(171, 167, 167);
 .container{
     
     width: 4rem;
-    height: min(100vh,1000px);
+    height: 100vh;
     @include display-center(center,center );
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     // border: 1px solid red;
@@ -61,6 +61,7 @@ $background-color:rgb(171, 167, 167);
                     fill: red !important;
                     
                 }
+                
                 img{
                   width: 1.9rem;
                 //   height: 30px;
@@ -68,11 +69,14 @@ $background-color:rgb(171, 167, 167);
                   
                   
                   cursor: pointer;
-                }
-                img:hover{
+                  &:hover{
                     border-radius: 0.5rem;
                     background-color: $background-color;
+                    }
+                 
                 }
+                
+                
 
             }
         }

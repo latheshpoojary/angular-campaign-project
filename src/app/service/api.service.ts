@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-@Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+import { Injectable } from '@angular/core';
+
+import {BehaviorSubject, from, of} from 'rxjs';
+ 
+@Injectable({
+  providedIn: 'root'
 })
-export class HeaderComponent {
-  public current = true;
-  public sortString!:string;
-  public sortOrder = 'desc';
-  public campaignList = [
+export class ApiService {
+  public progressActive = new BehaviorSubject<any>({
+    camaping:false,
+    location:false,
+    audience:false
+  })
+  public progressDone = new BehaviorSubject<any>({
+    camaping:false,
+    location:false,
+    audience:false
+  })
+  formData:any='';
+  public campaignList =[
     {
       id:123456,
       order:"Food",
@@ -87,17 +95,35 @@ export class HeaderComponent {
 
 
 
+    },
+    {
+      id:732873,
+      order:"Food",
+      name:"Bravo",
+      status:"completed",
+      CTR:"2.5%",
+      start_date:new Date()
+
+
+
     }
   ]
-  sortOnDirection(){
-    if(this.sortOrder=='asc'){
-      this.sortOrder= 'desc';
-    }
-    else{
-      this.sortOrder='asc';
-    }
-    console.log(this.sortOrder);
+  getUser(){
+
+    return this.campaignList;
+  }
+  setFormData(data:any){
+    console.log(data,"in service");
     
     
+    this.formData = data;
+    this.formData.status='draft';
+    this.formData.location = 'bejai';
+    
+    
+    
+  }
+  getForm(){
+    return this.formData;
   }
 }
