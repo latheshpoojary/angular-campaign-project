@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './campaign/header/header.component';
 import { CampaignInputComponent } from './campaign/campaign-input/campaign-input.component';
 import { LocationDetailsComponent } from './campaign/location-details/location-details.component';
 import { CampaignDetailsComponent } from './campaign/campaign-details/campaign-details.component';
 import { UserDetailsComponent } from './campaign/user-details/user-details.component';
 import { AudienceComponent } from './campaign/audience/audience.component';
 import { SummaryComponent } from './campaign/summary/summary.component';
+import { HeaderComponent } from './campaign/header/header.component';
 
 const routes: Routes = [
   

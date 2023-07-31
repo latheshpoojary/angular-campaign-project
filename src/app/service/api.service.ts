@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import * as CampaignData from "../data/data.json";
 import {BehaviorSubject, from, of} from 'rxjs';
  
 @Injectable({
@@ -16,112 +16,20 @@ export class ApiService {
     location:false,
     audience:false
   })
-  formData:any='';
-  public campaignList =[
-    {
-      id:123456,
-      order:"Food",
-      name:"John",
-      status:"completed",
-      CTR:"2.5%",
-      start_date:new Date()
 
-
-
-    },
-    {
-      id:848743,
-      order:"Food",
-      name:"Seen",
-      status:"draft",
-      CTR:"1.5%",
-      start_date:new Date()
-
-
-
-    },
-    {
-      id:828327,
-      order:"Cofee",
-      name:"Ramesh",
-      status:"completed",
-      CTR:"2.5%",
-      start_date:new Date()
-
-
-
-    },
-    {
-      id:989438,
-      order:"Tesco",
-      name:"Vikash",
-      status:"scheduled",
-      CTR:"2.5%",
-      start_date:new Date()
-
-
-
-    },
-    {
-      id:728343,
-      order:"Food",
-      name:"Dosen",
-      status:"completed",
-      CTR:"2.5%",
-      start_date:new Date()
-
-
-
-    },
-    {
-      id:463782,
-      order:"Food",
-      name:"Raina",
-      status:"completed",
-      CTR:"2.5%",
-      start_date:new Date()
-
-
-
-    },
-    
-    {
-      id:732873,
-      order:"Food",
-      name:"Bravo",
-      status:"completed",
-      CTR:"2.5%",
-      start_date:new Date()
-
-
-
-    },
-    {
-      id:732873,
-      order:"Food",
-      name:"Bravo",
-      status:"completed",
-      CTR:"2.5%",
-      start_date:new Date()
-
-
-
-    }
-  ]
+  formData:any={
+    dieses:'food',
+    CTR:"2.5%",
+    status:'draft',
+    category:'Option1',
+    offer_type:'Option2'
+  };
+  public campaignList = JSON.parse(JSON.stringify(CampaignData)).data;
   getUser(){
-
     return this.campaignList;
   }
   setFormData(data:any){
-    console.log(data,"in service");
-    
-    
-    this.formData = data;
-    this.formData.status='draft';
-    this.formData.location = 'bejai';
-    
-    
-    
+    this.formData = data;   
   }
   getForm(){
     return this.formData;

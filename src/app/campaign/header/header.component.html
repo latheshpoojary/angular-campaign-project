@@ -3,9 +3,9 @@
   <div class="header-container">
     <h3 class="header-text">Manage Campaigns</h3>
     <select name="" id="">
-      <option value="">posesssseve bandwisdth</option>
-      <option value="">Defjnkjsdncsjcsccsdcs</option>
-      <option value="">sdcdscsdcds csdcsssc</option>
+      <option value="">Lathesh</option>
+      <option value="">Vikash</option>
+      <option value="">Sathwik</option>
     </select>
   </div>
   <div class="title mt-3">
@@ -13,7 +13,7 @@
   </div>
   <div class="display-list p-4">
     <div class="display-header">
-      <button class="btn btn-primary mb-3" routerLink="/campaign-input">
+      <button class="btn btn-primary mb-3" routerLink="/campaign-input" (click)="clearForm()">
         Create Campaign
       </button>
       <div class="sortConatiner">
@@ -57,7 +57,9 @@
           >
             <td>{{ campaign.id }}</td>
             <td [routerLink]="['/userDetails', campaign.id]" class="userName">
-              {{ campaign.order }}, {{ campaign.name }}
+              <a >{{ campaign.request}}, {{ campaign.name}}</a>
+              
+              
             </td>
 
             <td>
@@ -71,7 +73,7 @@
                     : '#ccccff'
                 "
               >
-                {{ campaign.status }}
+                {{ campaign.status | titlecase}}
               </div>
             </td>
             <td>{{ campaign.CTR }}</td>

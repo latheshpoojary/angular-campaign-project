@@ -39,16 +39,13 @@ $header-text:rgb(62, 60, 60);
         
     }
     .display-list{
-        background-color: #f2f2f2;
+        background-color: #ffffff;
         border-radius: 8px;
         width: 100%;
-        // height: 70vh;
-        
-        
-        
         .display-header{
             display: flex;
             justify-content: space-between;
+            width: 100%;
             select{
                 padding: 0.1rem !important;
             }
@@ -57,18 +54,40 @@ $header-text:rgb(62, 60, 60);
             }
         }
         .display-container{
+            width: 100%;
             height: 60vh;
-            overflow-y: scroll;
+            overflow-y: scroll;           
+            table{
+                width: 100%;
+                overflow: scroll;
+                th, td{
+                    
+                    width: fit-content;
+                    &:nth-child(3){
+                        text-align: center;
+                       
+                        .status{
+                            // border: 1px solid red;
+                            margin-inline: auto;
+                            
+                        }
+                    } 
+                    // border: 1px solid red;
+                }
+                td:nth-child(1){
+                    padding-left: 2.5%;
+                }
+                td:nth-child(2)::after{
+                    content: url('../../../assets/icons/link.svg');
+                    display: inline-block;
+                    margin-left: 1rem;
+                    
+                }
+                
+            }
         }
-        
-
-           
-        
-        
-        .title,td,th{
+        .title,td,th{           
             font-size: 0.8rem !important;
-            
-            
         }
         .form-select{
             padding: 0.5rem;
@@ -81,13 +100,10 @@ $header-text:rgb(62, 60, 60);
             cursor: pointer;
         }
         .status{
-            width: 5rem;
-            height: 1.5rem;
-            
-            text-align: center;
-            
+            width: 6rem;
+            padding: 0.5rem;  
+            text-align: center; 
             background-color: aqua;
-
             border-radius: 2.5rem;
         }
 

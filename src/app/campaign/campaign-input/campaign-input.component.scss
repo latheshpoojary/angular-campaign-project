@@ -24,46 +24,38 @@
     .progress-bar{
         display: flex;
        flex-direction: row;
-    //    justify-content: space-evenly;
        align-items: center;
        text-align: center;
-    //    border: 1px solid red;
         .bullet{
             position: relative;
             width: 30px;
             height: 30px;
             border-radius: 50%;
             border: 1px solid black;
-            // background-color: green;
-            
-            // color: green;
             & p:nth-child(1)::after{
                 position: absolute;
-                content: 'campaign details';
-                left: 3rem;
+                content: 'Campaign details';
+                left: 1.9rem;
+                top: 0.04rem;
                 color: black;
                 background-color: #e2dfdf;
-                z-index: 999;
-                
+                z-index: 999;    
             }
             &:nth-child(3) p::after{
                 position: absolute;
-                content: 'location details';
-                left: 3rem;
+                content: 'Location details';
+                left: 1.9rem;
                 color: black;
                 background-color: #e2dfdf;
-                z-index: 999;
-                
+                z-index: 999;               
             }
             &:nth-child(5) p::after{
                 position: absolute;
-                content: 'audience details';
-                left: 3rem;
+                content: 'Audience details';
+                left: 1.9rem;
                 color: black;
                 background-color: #e2dfdf;
                 z-index: 999;
-                
-
             }
             &:last-child p::after{
                 content: 'Summary';

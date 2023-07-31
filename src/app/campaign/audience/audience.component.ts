@@ -13,6 +13,8 @@ export class AudienceComponent implements OnInit{
   buttonText = "";
   constructor(private api:ApiService,private campaignInput:CampaignInputComponent){}
   ngOnInit(): void {
+    console.log(this.api.getForm());
+    
     this.api.progressActive.subscribe(res=>{
       res.audience = true;
     })

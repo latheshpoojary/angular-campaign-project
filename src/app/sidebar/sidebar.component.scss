@@ -16,12 +16,14 @@ $background-color:rgb(171, 167, 167);
 .container{
     
     width: 4rem;
+    // min-height: 100vh;
     height: 100vh;
     @include display-center(center,center );
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-    // border: 1px solid red;
+    
     article
     {
+        // border: 1px solid red;
         width: 100%;
         height: 90%;
         margin: auto;
@@ -98,4 +100,48 @@ $background-color:rgb(171, 167, 167);
         }
     }
 
+}
+@media (width<768px){
+    .container{
+        width: 100% !important;
+        position: fixed;
+        height: 4rem;
+        background-color: rgb(171, 167, 167);;
+        z-index: 999;
+        align-items: end;
+        bottom: 0;
+        flex-direction: row;
+        article{
+            width: 90% !important;
+            flex-direction: row;
+            margin: auto;
+            nav{
+                flex-direction: row;
+                .profile{
+                    width: 40%;
+                    img{
+                        width: 2.5rem;
+                    }
+                }
+                .navigation{
+                    width: 90%;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    img{
+                        width: 3rem;
+                    }
+                }
+            }
+            .expander{
+                display: none;
+            }
+        }
+    }
+    
+
+}
+@media (min-width: 576px){
+    .container {
+        max-width: 100% !important;
+    }
 }

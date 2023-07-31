@@ -12,10 +12,17 @@ constructor(private api:ApiService){}
 
 ngOnInit(): void {
   this.formData= this.api.getForm();
-  console.log(this.formData);
-  
-  
-  
+}
+ 
+goBack(){
+  this.api.progressDone.subscribe(res=>{
+    res.audience = false;
+  })
 }
 
+addCampaign(){
+  this.formData.id=this.api.campaignList.length+1;
+  this.formData.start_date = new Date();
+  this.api.campaignList.push(this.formData);
+}
 }

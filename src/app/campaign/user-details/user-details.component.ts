@@ -9,20 +9,27 @@ import {ActivatedRoute} from '@angular/router'
 export class UserDetailsComponent implements OnInit{
   userDetails: any | null = null;
   userID: any | null = null;
-  
+  index!:number;
+  toDelete=false;
+  showEdit=false;
   constructor(private api: ApiService, private route: ActivatedRoute) {}
   
   ngOnInit(): void {
     this.userID = this.route.snapshot.paramMap.get('id');
     console.log(this.userID);
     this.userDetails = this.api.getUser().find((item:any)=>item.id.toString()===this.userID);
-    console.log(this.userDetails);
-
-    
-  
-    
     };
-    
+    onEdit(id:any){
+      this.showEdit= true;  
+    }
+    onDelete(id:any){
+      this.index = id-1;
+      console.log(this.index);  
+      this.toDelete = true;
+    }
+    deleteConfirmed(){
+      this.api.getUser().splice(this.index,1);
+    }
   }
   
 

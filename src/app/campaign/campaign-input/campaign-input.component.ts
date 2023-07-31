@@ -12,9 +12,6 @@ export class CampaignInputComponent implements OnInit{
  ngOnInit(): void {
    this.api.progressActive.subscribe(res=>{
     this.activeProgress = res;
-    
-    
-    
    })
    this.api.progressDone.subscribe(res=>{
     this.doneProgress = res;

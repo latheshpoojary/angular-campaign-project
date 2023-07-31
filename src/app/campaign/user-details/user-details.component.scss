@@ -5,18 +5,13 @@
 }
 $sub-text:rgb(171, 167, 167);
 $header-text:rgb(62, 60, 60);
+$font-family:'Poppins',sans-serif;
 
 .workspace-container{
-   
-    // border: 1px solid red;
     height:min(100vh,1000px);
     padding: 2.2rem 1.5rem ;
     background-color:#e2dfdf ;
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-;
-    align-items: center;
-    gap: 6rem;
+    
     .header-container{
         width: 100%;
         display: flex;
@@ -27,78 +22,133 @@ $header-text:rgb(62, 60, 60);
             font-size: min(6vw,1.5rem);
             color: $header-text;
             text-align: center;
-            
-            
         }
+
         select{
             padding: 0.2rem;
-            
             border-radius: 0.1rem;
         }
         
         input{
             padding: 0.5rem;
-        }
-        
+        }    
+    }
+    .title{
+        font-size: 1rem;
         
     }
     .display-details{
-        // border: 1px solid red;
+        position: relative;
+        width: 100%;
+        border: 1px solid black;
         background-color: #ffffff;
-        width: 60%;
-        border-radius: 8px;
-        flex-wrap: wrap;
-        padding: 3rem;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        // margin
+        padding: 2rem;
+        
         .userdetails{
-            // border: 1px solid red;
+            width: 100%;
             display: flex;
             justify-content: center;
-            gap: 8rem;
-            align-items: center;
+            gap: 4rem;
+            padding:0 1rem ;
             .left{
-                // border: 1px solid red;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
+                text-align: center;
                 img{
-                    
-                    width: 80%;
-                    height: 80%;
+                    width: 200px;
+                    height: 200px;
                 }
                 h3{
-                    text-align: center;
+                    font-size: 2rem;
                 }
             }
-            .right{
-                width: 100%;
-                // border: 1px solid red;
-                table{
-                    width: 100%;
-                    tr{
-                        // display: flex;
-                        // gap: 1rem;
-                        
-                        // border: 1px solid red;
-                        padding: 1rem;
-                        td{
-                            // border: 1px solid red;
-                            margin-bottom: 1rem !important;
-                        }
-                    }
+            .right{             
+                table tr td{
+                    padding: 1rem;
+                    
                     .status{
-                        width:50% ;
+                        border: 1px solid rgba(grey,0.3);
+                        padding: 0.5rem 1.5rem;
                         border-radius: 20px;
                         text-align: center;
-                        // background-color: aqua;
-                        // width: 100px;
-                        // border: 1px solid red;
+                        
+                    }
+                }
+                .action{
+                    // border: 1px solid red;
+                    padding: 1rem;
+                    display: flex;
+                    gap: 2rem;
+                    .btn{
+                        width: 30% !important;
+                    }
+                }
+            }
+            
+        }
+        
+        .delete-model{
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            width: 450px;
+            padding: 2rem;
+            background-color: #ffffff;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transform: scale(0);
+            
+            transition:transform 0.3s; 
+            &.show {
+                transform: scale(1);
+
+            }
+            .delete-message{
+                width: 100%;
+                h3{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 1.5;
+                }
+                p{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: grey;
+                }
+            }
+            .confirm-buttons{
+                display: flex;
+                gap: 2rem;
+                .btn{
+                    border-radius: 0px !important;
+                    padding-inline: 2rem;
+                    &.btn-secondary{
+                        background-color: transparent !important;
+                        color: black;
                     }
                 }
             }
         }
+    }
+    .edit-model{
+        position: absolute;
+        top: 12%;
+        left: 30%;
+        width: 45%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: #ffffff;
+        transform: scale(0);
+        transition: transform 0.3s;
+        &.show{
+            transform: scale(1);
+        }
+
     }
 }

@@ -26,48 +26,79 @@
         }
     }
     .content{
-        // border: 1px solid red;
         width: 100%;
-        table{
-            width: 100%;
-            // border: 1px solid red;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px ;
-            th,td{
+        display: flex;
+        margin-top: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+       .industry{
+        position: relative;
+        padding-right: 0;
+        width: 33.33%;
+        .heading{
+            border-bottom:2px solid  rgba(grey,0.2);
+            margin-bottom: 1rem;
+            padding: 1rem 2rem;
+            h3{
+                font-size: 2rem;
+            }
+        }       
+        .industry-branch{  
+              
+            .branches{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                border-right: 2px solid rgba(grey,0.2);
                 
-                border-right: 1px solid grey;
-                h5{
-                    font-size: 1rem;
-
-                }
-                p{
-                    font-size: 1rem;
-                    
-                    // border: 1px solid red;
-                    span{
-                        // border: 1px solid red;
-                        
+            }
+            .category{
+                display: none;
+                background-color: #ffffff;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                // padding: 2rem 0;
+                
+                left: 100%;
+                // opacity: 0;
+                transition: opacity .3s ease;
+                .heading{
+                    padding-left: 2rem;
+                    h3{
+                        font-size: 2rem;
                     }
                 }
-                
-                
-            }
-            td{
-                position: relative;
-                span{
-                    position: absolute;
-                    top: 1.5rem;
-                    right: 0;
+                .branches{
+                    padding-left: 2rem;
                 }
-                &:hover{
-                    background-color: #ccccff;
-                    color: blue;
-                }
+               .application{
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background-color: #ffffff;
+                padding-left: 0;
+
+               }
             }
-            
-            
-            
-            
+            & .branches:hover{
+                background-color: #b3b3ff;
+                .category{
+                    display: block;
+                    opacity: 1;
+                    & .branches:hover{
+                        .application{
+                            display: block;
+                        }
+                    }              
+            } 
+            }
+
         }
+        
+       }
     }
     .footer{
         
@@ -77,7 +108,4 @@
         
     }
     
-}
-@media (max-width:768px){
-
 }
